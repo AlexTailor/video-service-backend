@@ -14,8 +14,8 @@ public class RecommendationController {
     RecommendationRepository repository;
 
     @GetMapping("/recommendations/{videoId}")
-    public List<Recommendation> getRecommendationsByVideoId(@PathVariable("videoId") long voteId) {
-        return repository.getAllByVideoId(voteId);
+    public List<Recommendation> getRecommendationsByVideoId(@PathVariable("videoId") long videoId) {
+        return repository.getAllByVideoId(videoId);
     }
 
     @PostMapping("/save")
